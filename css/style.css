@@ -214,7 +214,7 @@ a:hover {
 
 /* line 87, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_common.scss */
 h1, h2, h3, h4, h5, h6 {
-  color: #fff;
+  color: #10A518;
   font-family: "Aclonica", sans-serif;
 }
 
@@ -2203,8 +2203,7 @@ ul {
 }
 .social{
   color: white;
-  display: flex;
-  gap: 1rem;
+
 }
 .social * {
   transition: all .4s;
@@ -2622,7 +2621,7 @@ ul {
 /* line 2, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_banner.scss */
 .banner_part {
   position: relative;
-  background-image: url(../img/banner_bg.png);
+  background-image: url(../img/logo-noframe.png);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: right;
@@ -2662,7 +2661,7 @@ ul {
   font-weight: 700;
   margin-bottom: 32px;
   line-height: 70px;
-  color: #fff;
+  color: #10A518;
 }
 
 @media (max-width: 576px) {
@@ -6554,11 +6553,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 .coming__header{
   text-align: center;
-  margin-bottom: 5rem;
+  width: 500px;
+  padding-bottom: 1rem;
+  margin: 5rem auto;
+  border-bottom: 3px solid white;
 }
 .coming__gallery{
   display: grid;
-  grid-template-columns: repeat(2,1fr);
+  grid-template-columns: repeat(1,1fr);
   justify-items:center;
   gap:2rem;
 }
@@ -6591,7 +6593,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .buy__heading{
   width: 300px;
-  border-bottom: 2px solid #10A518;
+  border-bottom: 3px solid white;
   text-align: center;
   padding-bottom:1rem;
 }
@@ -6671,6 +6673,12 @@ h1, h2, h3, h4, h5, h6 {
 .roadmap{
   padding: 5rem 0;
   overflow: hidden;
+}
+.roadmap__header h1{
+  border-bottom: 3px solid white;
+  width: 300px;
+  margin: 0 auto;
+  padding-bottom: 1rem;
 }
 .roadmap__content{
   display: flex;
