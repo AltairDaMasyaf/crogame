@@ -6578,7 +6578,7 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   flex-direction: column;
   letter-spacing: 2px;
-  margin-bottom:10rem;
+  /* margin-bottom:10rem; */
   padding-bottom: 5rem;
 }
 .buy__header{
@@ -6625,4 +6625,114 @@ h1, h2, h3, h4, h5, h6 {
   justify-content: center;
   align-items: center;
   gap: 3rem;
+}
+
+.buy__video{
+  display: flex;
+  align-items: center ;
+}
+
+.buy__video video{
+  max-width:100%;
+  margin: 5rem 0;
+}
+
+/* Cronos */
+
+.cronos{
+  display: flex;
+  flex-direction: column;
+  padding: 5rem 0;
+}
+.cronos__header{
+  text-align: center;
+  margin-bottom: 5rem;
+}
+.cronos__content{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2rem;
+}
+.cronos__item{
+  display: flex;
+  flex-direction: column;
+  max-width:300px;
+  text-align: center;
+  gap:2rem;
+}
+.cronos__img{
+  justify-self: flex-start;
+}
+
+/* RoadMap */
+.roadmap{
+  padding: 5rem 0;
+  overflow: hidden;
+}
+.roadmap__content{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 5rem 0;
+  gap:2rem;
+}
+.roadmap__item{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 350px;
+  height: 800px;
+  z-index: 2;
+  /* border: 1px solid red; */
+}
+.roadmap__info{
+  display: flex;
+  flex-direction: column;
+  z-index: 2;
+  position: relative !important;
+  left: 80px;
+  bottom: -400px;
+}
+.roadmap__title{
+  color: #10A518;
+  margin-left: 40px;
+}
+.list__item{
+  color: #10A518;
+}
+
+.roadmap__header{
+  text-align: center;
+}
+.roadmap__list{
+  list-style-image: url("../img/list.png");
+  display: flex;
+  flex-direction: column;
+  color: white;
+  justify-content: flex-start;
+  align-items: stretch;
+}
+.rm-bg{
+  position:absolute;
+  top: 0;
+  z-index: 1;
+  /* width: 250px; */
+  height: 800px;
+}
+
+
+@media screen and (max-width:768px) {
+  p {
+    text-align: center;
+  }
+}
+@media screen and (min-width:769px) {
+  p {
+    text-align: left;
+  }
 }
