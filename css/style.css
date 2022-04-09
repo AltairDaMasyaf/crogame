@@ -218,7 +218,11 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Aclonica", sans-serif;
   text-align: center;
 }
-
+@media screen and (min-width:768px) {
+  h1, h2, h3, h4, h5, h6 {
+    text-align: left;
+  }
+}
 /* line 91, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_common.scss */
 p {
   font-family: "Poppins", sans-serif;
@@ -6567,6 +6571,12 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 1.2rem;
   animation: fadeIn 1s infinite alternate;
 }
+.glasshour{
+  transition: all 3s;
+}
+.glasshour:hover{
+  transform: rotateY(180deg);
+}
 @media screen and (max-width:768px){
   .coming__gallery{
     grid-template-columns: repeat(1,1fr);
@@ -6673,6 +6683,13 @@ h1, h2, h3, h4, h5, h6 {
 .cronos__img{
   justify-self: flex-start;
 }
+.cronos__img img{
+  transition: all 1s;
+  cursor: pointer;
+}
+.cronos__img img:hover{
+  transform: rotateY(180deg);
+}
 
 /* RoadMap */
 .roadmap{
@@ -6759,9 +6776,32 @@ section{
 
 .hero{
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
 }
-
+.hero__img{
+  transform: translatey(0px);
+	animation: float 4s ease-in-out infinite;
+  cursor: pointer;
+}
+@keyframes float {
+	0% {
+		transform: translatey(0px);
+	}
+	50% {
+		transform: translatey(-40px);
+	}
+	100% {
+		transform: translatey(0px);
+	}
+}
+.hero__img{
+  width: 400px;
+}
+.banner_text{
+  /* max-width: 450px; */
+}
 @media screen and (min-width:768px) {
   .hero{
     flex-direction: row;
@@ -6774,6 +6814,11 @@ section{
   }
 }
 
+@media screen and (min-width:768px) and (max-width:991px){
+  .banner_text{
+    margin-top:5rem !important;
+  }
+}
 
 @media screen and (max-width:768px) {
   .about_us_text{
@@ -6784,10 +6829,17 @@ section{
   }
   .hero{
     flex-direction: column-reverse;
-    margin: 5rem 0 10rem;
+    margin: 8rem 0 10rem;
   }
 }
-
+@media screen and (min-width:991px){
+  .hero{
+    margin:8rem 0 5rem;
+  }
+  .banner_text{
+    margin-top:5rem !important;
+  }
+}
 /* game */
 
 @media screen and (max-width:768px) {
@@ -6810,7 +6862,7 @@ section{
     flex-direction: row;
     justify-content: space-between;
     align-items:center;
-    gap: 3rem;
+    gap: 2rem;
     padding: 0 2rem;
   }
   .footer__content img {
@@ -6826,9 +6878,9 @@ section{
   }
   .footer__social{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     gap: 2rem;
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
   .footer__info{
     display: flex;
@@ -6889,4 +6941,61 @@ section{
 
 html{
   scroll-behavior: smooth;
+}
+
+/* Team */
+
+.team{
+  padding: 5rem 0;
+  margin-bottom: 5rem;
+}
+.team__content{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 2rem;
+  margin: 5rem 2rem;
+}
+.team__item{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: .7rem;
+  background-color: #333;
+  border-radius: 10px;
+  padding:1rem;
+  width: 250px;
+}
+.team__contact{
+  display: flex;
+  flex-direction: row;
+  justify-content:flex-start;
+  gap:1rem;
+}
+.team__job{
+  margin-left: 1rem;
+  font-size: 1rem;
+}
+.team__social{
+  transform: translateY(.3rem);
+  color:green;
+  transition: all .4s;
+}
+.team__social:hover{
+  transform:translateY(-.3rem);
+  color:white;
+}
+.team__img{
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all .4s;
+}
+.team__img:hover{
+  transform: rotate(5deg) scale(1.1);
+}
+
+.center{
+  text-align: center;
 }
