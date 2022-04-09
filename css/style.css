@@ -216,6 +216,7 @@ a:hover {
 h1, h2, h3, h4, h5, h6 {
   color: #10A518;
   font-family: "Aclonica", sans-serif;
+  text-align: center;
 }
 
 /* line 91, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_common.scss */
@@ -2513,25 +2514,18 @@ ul {
     width: 100%;
     background-color: green;
     text-align: center !important;
-    margin-top: 2rem;
+    margin-top: 3rem;
   }
   /* line 291, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_menu.scss */
   .navbar-brand img {
     width: 70px;
-    height:80px;
-    margin: 0 auto;
-    position: absolute;
-    left: 0;
-    right: 0;
-    display: inline-block;
-    top: 10px;
-    order: 1 !important;
+    height:100px;
   }
   /* line 301, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_menu.scss */
   .navbar-light .navbar-toggler {
     border-color: transparent;
     position: absolute;
-    left: 0;
+    right: 0;
   }
   /* line 307, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_menu.scss */
   .btn_1 {
@@ -2552,23 +2546,16 @@ ul {
     min-width: 100% !important;
     background-color: green;
     text-align: center !important;
-    margin-top: 2rem;
+    margin-top: 3rem;
   }
   /* line 323, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_menu.scss */
   .navbar-brand img {
-    height: 80px;
-    margin: 0 auto;
-    position: absolute;
-    left: 0;
-    right: 0;
-    display: inline-block;
-    top: 10px;
+    height: 100px;
   }
   /* line 333, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_menu.scss */
   .navbar-light .navbar-toggler {
     border-color: transparent;
-    position: absolute;
-    left: 0;
+    height: 100px !important;
   }
   /* line 339, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_menu.scss */
   .btn_1 {
@@ -2621,17 +2608,17 @@ ul {
 /* line 2, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_banner.scss */
 .banner_part {
   position: relative;
-  background-image: url(../img/logo-noframe.png);
+  /* background-image: url(../img/logo-noframe.png);
   background-repeat: no-repeat;
   background-size: contain;
-  background-position: right;
+  background-position: right; */
 }
 
 /* line 8, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_banner.scss */
 .banner_part .banner_text {
   display: table;
   width: 100%;
-  height: 1020px;
+  height: ;
 }
 
 /* line 12, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_banner.scss */
@@ -2643,7 +2630,7 @@ ul {
 @media (max-width: 991px) {
   /* line 8, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_banner.scss */
   .banner_part .banner_text {
-    height: 650px;
+    height: ;
   }
 }
 
@@ -6549,11 +6536,11 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Coming Soon */
 .coming{
-  margin: 2rem 0 10rem 0;
+  margin: 2rem 0 15rem 0;
 }
 .coming__header{
   text-align: center;
-  width: 500px;
+  width: 300px;
   padding-bottom: 1rem;
   margin: 5rem auto;
   border-bottom: 3px solid white;
@@ -6568,6 +6555,17 @@ h1, h2, h3, h4, h5, h6 {
   height:300px;
   transition: all .3s;
   cursor: pointer;
+}
+.animation__content{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.animation__title{
+  font-size: 1.2rem;
+  animation: fadeIn 1s infinite alternate;
 }
 @media screen and (max-width:768px){
   .coming__gallery{
@@ -6645,10 +6643,17 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   flex-direction: column;
   padding: 5rem 0;
+  margin: 10rem auto;
 }
 .cronos__header{
   text-align: center;
   margin-bottom: 5rem;
+}
+.cronos__heading{
+  border-bottom: 3px solid white;
+  width: 300px;
+  margin: 0 auto;
+  padding-bottom:1rem ;
 }
 .cronos__content{
   display: flex;
@@ -6656,7 +6661,7 @@ h1, h2, h3, h4, h5, h6 {
   flex-wrap: wrap;
   justify-content: center;
   align-items: flex-start;
-  gap: 2rem;
+  gap: 4rem;
 }
 .cronos__item{
   display: flex;
@@ -6688,6 +6693,7 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
   margin: 5rem 0;
   gap:2rem;
+  overflow: hidden;
 }
 .roadmap__item{
   display: flex;
@@ -6708,7 +6714,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .roadmap__title{
   color: #10A518;
-  margin-left: 40px;
+  margin-right: 140px;
 }
 .list__item{
   color: #10A518;
@@ -6743,4 +6749,142 @@ h1, h2, h3, h4, h5, h6 {
   p {
     text-align: left;
   }
+}
+
+section{
+  overflow: hidden;
+}
+
+/* hero */
+
+.hero{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@media screen and (min-width:768px) {
+  .hero{
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin: 10rem 0 10rem;
+  }
+  .banner_text{
+    height: 200px !important;
+    margin-top: 12rem !important;
+  }
+}
+
+
+@media screen and (max-width:768px) {
+  .about_us_text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .hero{
+    flex-direction: column-reverse;
+    margin: 5rem 0 10rem;
+  }
+}
+
+/* game */
+
+@media screen and (max-width:768px) {
+  .game{
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
+
+/* footer*/
+.footer{
+  border-top: 3px solid white;
+  padding: 2rem 0;
+  margin-top: 10rem;
+}
+
+@media screen and (max-width:768px) {
+  .footer__content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items:center;
+    gap: 3rem;
+    padding: 0 2rem;
+  }
+  .footer__content img {
+    width: 120px;
+  }
+  .footer__partners{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  .footer__partners img{
+    width: 250px;
+  }
+  .footer__social{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    font-size: 1.2rem;
+  }
+  .footer__info{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 2rem;
+    padding: 2rem 0;
+    border-top: 1px solid grey;
+
+  }
+}
+
+@media screen and (min-width:769px) {
+  .footer__content{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 4rem;
+    padding: 0 2rem;
+  }
+  .footer__content img {
+    width:250px;
+  }
+  .footer__partners{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .footer__partners img{
+    width:250px;
+  }
+  .footer__social{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 3rem;
+    font-size: 1.8rem;
+  }
+  .footer__info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    border-top: 1px solid grey;
+    padding: 2rem 0;
+  }
+}
+
+.made{
+  opacity: .5;
+  transition: all .3s;
+  cursor: pointer;
+}
+.made:hover{
+  opacity: 1;
 }
